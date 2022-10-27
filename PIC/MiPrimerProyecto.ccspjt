@@ -1,0 +1,37 @@
+[PROJECT]
+Target=C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto.hex
+Processor_Text=PIC16F88
+CCSVerions=5.110P-1003c
+Compiler=PCM
+[Target Data]
+FileList=MiPrimerProyecto.c
+[Directories]
+Include=
+[C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto]
+Type=4
+[mru-list]
+1=MiPrimerProyecto.c
+[Units]
+Count=1
+1=MiPrimerProyecto (main)
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=24-10-2022
+D1_L=4
+D1_L1=[48808]Project Opened.
+D1_L2=[48833]Started Editing.
+D1_L3=[49485]Stopped Editing.
+TotalEdit=6
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L4=[50430]Project Closed.
+
+[Opened Files]
+1=MiPrimerProyecto.c
+t1=13
+Count=1

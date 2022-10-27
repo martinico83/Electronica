@@ -1,0 +1,5 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto on 24-oct.-22 at 13:41
+>>> Warning 203 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto.c" Line 18(1,1): Condition always TRUE
+*** Error 79 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto.c" Line 23(4,5): Expect }
+      1 Errors,  1 Warnings.
+Build Failed.
