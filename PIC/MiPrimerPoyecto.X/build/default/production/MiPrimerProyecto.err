@@ -1,0 +1,5 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerPoyecto.X\MiPrimerProyecto on 29-oct.-22 at 13:38
+C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerPoyecto.X\MiPrimerProyecto.c:11:5:  Error#12  Undefined identifier   TRISC
+C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerPoyecto.X\MiPrimerProyecto.c:12:5:  Error#12  Undefined identifier   PORTC
+      2 Errors,  0 Warnings.
+Build Failed.
