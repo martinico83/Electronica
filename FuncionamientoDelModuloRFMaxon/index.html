@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Funcionamiento Modulo RF Maxon</title>
+</head>
+
+<body>
+  <h1>FUNCIONAMIENTO DEL MODULO DE RF MAXON</h1>
+  <p>La serie Maxon SD-125 de módulos RF Link de Maxon utiliza la última tecnología en su diseño y fabricación. Tanto el
+    modelo UHF como el VHF están controlados por PLL (Phase Lock Loop Synthesizer) / microprocesador y ofrecen de uno a
+    cinco vatios de potencia con capacidad para 16 canales. Múltiples funciones que incluyen velocidades de transmisión
+    de 1200 a 9600, acoplamiento de audio de CA y/o CC, modulación GMSK y FSK son estándar en estas unidades de módulo
+    de enlace de RF de ancho de banda amplio totalmente programables. La radio se programa utilizando una computadora
+    personal IBM®, software basado en DOS®, un módulo de interfaz y un cable de programación. Esto permite que la radio
+    se adapte a los requisitos del usuario individual y de los sistemas en los que opera. </p>
+
+  <h3>CARACTERISTICAS</h3>
+  <p> • Bloqueo de canal ocupado
+    • 16 canales
+    • Tiempo de espera de TX
+    • Ahorro de energía
+    • Salida programable de 1 / 5 vatios
+    • Separación de canales programable de 12,5/25 kHz
+  </p>
+
+  <h5>Bloqueo de canal ocupado</h5>
+  <p>La función Bloqueo de canal ocupado, cuando está habilitada, desactiva el transmisor cuando el canal receptor está
+    ocupado y el usuario intenta transmitir. </p>
+  <h5>16 canales</h5>
+  <p>La radio de la serie SD-125 puede almacenar hasta 16 canales dentro de la misma banda. </p>
+  <h5>Tiempo de espera de TX</h5>
+  <p>La función de tiempo de espera de TX, cuando está habilitada, limita la cantidad de tiempo que el usuario puede
+    transmitir continuamente. Este tiempo se puede configurar en incrementos de 10 segundos desde 10 segundos hasta 990
+    segundos.</p>
+  <h5>Ahorro de energía</h5>
+  <p>La función de ahorro de energía se utiliza cuando se utiliza una batería externa como fuente de alimentación.
+    Cuando el ahorro de energía está habilitado, el tiempo de "ENCENDIDO" y "APAGADO" del receptor se puede programar en
+    la radio y le permite al operador establecer el tiempo que el receptor está dormido. </p>
+
+  <h2><u>TEORÍA DE OPERACIÓN</u></h2>
+
+  <h3>TX- CIRCUITO DE LA SEÑAL</h3>
+
+  <p>La señal de datos de transmisión viene por el pin 2 del Con 401(1) y pasa por U404D(2).
+    La señal TX es amplificada por U406C(3). La señal TX es filtrada por U405A y B(4) Que es un filtro de pasa bajos.
+  </p>
+
+  <h3>RX- CIRCUITO DE LA SEÑAL</h3>
+  <p>La señal de datos RX- viene de la placa RF, que está conectado con el pin 10 de Con 403(1). El RX-señal se conmuta
+    atreves del U404 A(2) y se ajusta Con el RV403 (3) y se amplifica byU407 (4). La señal amplificada pasa a PIN10 de
+    Con 401 (5). </p>
+
+  <h3>DETECTOR RSSI </h3>
+  <p>A partir de la placa RF, la señal RSSI (Indicador de Fuerza de Señal Recibida) fluye hasta U403A y B (1) hasta R461
+    (2). El pulso se inyecta desde el pin 5 del U403B (3) se descarga cada 1 ms y C451 (4). A continuación, se carga
+    mediante R464 (5). La señal RSSI es al mismo tiempo de entrada a la patilla 7 de U403A (6) y esas señales se
+    comparan. La señal de comparación es la salida del U403A. Pin 1 de U403A y la CPU detecta el ancho de pulso. El
+    ancho de pulso es variada por la tensión RSSI DC, por lo tanto, la detección de portadores es controlado por la CPU.
+  </p>
+
+  <h3>EEPROM</h3>
+  <p>El nivel de detección de RSSI, así como otros datos desde el programador se almacenan en la EEPROM (1) (U402). Los
+    datos almacenados se retienen sin suministro eléctrico. Esta es una memoria no volátil. La EEPROM puede tener
+    información reprogramada o borrada. U402 es una EEPROM con capacidad de 2048 (8 x 256) y los datos se escriben y
+    leen en serie. </p>
+  <h3>SELECTOR DE CANALES</h3>
+  <p>Se puede seleccionar uno de los 16 canales usando el interruptor DIP (SW401). SW401 (1) codifica el número de
+    canal, seleccionado en Código binario de 4 bits. El código binario más uno es igual al canal. número. El código
+    binario es decodificado por la CPU habilitando la frecuencia apropiada de RX o TX y los datos asociados seleccionado
+    de la EEPROM.</p>
+  <h3>REGULADOR DE DC</h3>
+  <p>La alimentación principal de CC se inyecta al regulador y este maneja las diferentes fuentes de alimentación
+    entregando una tensión constante de 7.5V. Es una fuente para todos los circuitos de RF. El regulador está formado
+    por el U801, Q801, Q802, L801 y R804. U801 (1) es un regulador de CC de modo conmutación IC. Varias entradas de CD
+    aparecen como un voltaje variado atreves del R804. U801 detecta el voltaje y controla el pulso de conmutación. Como
+    los pulsos de conmutación, Q801 y Q802 conmuta la entrada DC de varios voltajes de suministro y generan la CC
+    constante de tensión de alimentación.</p>
+  <h3>CIRCUITOS DE RF</h3>
+  <h5>TRANSMISOR:</h5>
+  <p>El transmisor se compone de:</p>
+  <p>1. Buffer </p>
+  <p>2. Módulo PA</p>
+  <p>3. Filtro de Paso Bajo</p>
+  <p>4. conmutador de antena</p>
+  <p>5. Circuitos de APC </p>
+  <h5>BUFFER:</h5>
+  <p>Nivel de salida del VCO (1) es -6dBm y amplificada a + 10 dBm (UHF), + 6dBm (VHF). El búfer consta de Q16 (2) y Q17
+    (3) para el aislamiento y la ganancia.</p>
+  <h5>MODULO P.A.:</h5>
+  <p>El módulo P.A. contiene Q501 (1), Q502 (2) y Q503 (3). Tres etapas, el amplificador Q501 amplifica la señal TX de
+    +10 dBm a 100 mW, Q502 se amplifica a 0,5 W Q503 amplifica a 3W y luego emparejado a 50 ohmios usando el L.C. red,
+    por lo tanto, reduciendo los armónicos en -30 dB. </p>
+  <h5>FILTRO PASA BAJO:</h5>
+  <p>L7, L8, L11, C72, C73, C74 y C75 son de séptimo orden, filtro de paso bajo Chebyshev. Se reducen los armónicos no
+    deseados por -70 dBc</p>
+  <h5>CONMUTADOR DE ANTENA</h5>
+
+</body>
+
+</html>
