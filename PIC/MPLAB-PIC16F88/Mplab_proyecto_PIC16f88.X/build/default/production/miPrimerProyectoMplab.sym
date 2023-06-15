@@ -1,0 +1,61 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+007     PORTA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+021     main.@SCRATCH1
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     TRISA
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000024  @cinit2
+
+Project Directory:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MPLAB-PIC16F88\Mplab_proyecto_PIC16f88.X\
+
+Project Files:
+    miPrimerProyectoMplab.c                                 [15-jun.-23 13:37  CRC=4E9E682D]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\16f88.h [03-oct.-22 04:09  CRC=25D0379C]
+
+Source signature=9A3ED765
+Program memory checksum=0000
+Hex file CRC=2F38
+
+Units:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MPLAB-PIC16F88\Mplab_proyecto_PIC16f88.X\miPrimerProyectoMplab (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+    Predefined symbols:
+       #define __16F88 1
+
+Output Files:
+    XREF file:   build\default\production\miPrimerProyectoMplab.xsym
+    Errors:      build\default\production\miPrimerProyectoMplab.err
+    Ext Symbols: build\default\production\miPrimerProyectoMplab.esym
+    INHX8:       build\default\production\miPrimerProyectoMplab.hex
+    Symbols:     build\default\production\miPrimerProyectoMplab.sym
+    List:        build\default\production\miPrimerProyectoMplab.lst
+    Debug/COFF:  build\default\production\miPrimerProyectoMplab.cof
+    Project:     miPrimerProyectoMplab.ccspjt
+    Call Tree:   build\default\production\miPrimerProyectoMplab.tre
+    Statistics:  build\default\production\miPrimerProyectoMplab.STA

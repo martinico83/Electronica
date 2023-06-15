@@ -1,0 +1,57 @@
+[defines]
+buildcount=14
+
+[Opened Files]
+1=miPrimerProyecto.c
+t1=9
+Count=1
+
+[ProjectLog]
+Days=2
+D1=14-06-2023
+D1_L=11
+D1_L1=[50300]Stopped Editing.
+D1_L2=[57720]Started Editing.
+D1_L3=[58318]Stopped Editing.
+D1_L4=[58853]Started Editing.
+D1_L5=[59158]Stopped Editing.
+D1_L6=[59527]Started Editing.
+D1_L7=[59964]Stopped Editing.
+D1_L8=[60167]Started Editing.
+D1_L9=[60467]Stopped Editing.
+D1_L10=[60642]Started Editing.
+D1_L11=[61081]Stopped Editing.
+TotalEdit=43
+TotalDebug=0
+D2=15-06-2023
+D2_E=43
+D2_D=0
+D2_L=11
+D2_L1=[30537]Project Closed.
+D2_L2=[31943]Project Opened.
+D2_L3=[33404]Started Editing.
+D2_L4=[34454]Stopped Editing.
+D2_L5=[48077]Started Editing.
+D2_L6=[48525]Stopped Editing.
+D2_L7=[48532]Started Editing.
+D2_L8=[48844]Stopped Editing.
+D2_L9=[59914]Started Editing.
+D2_L10=[60204]Stopped Editing.
+D2_L11=[60204]Project Closed.
+[PROJECT]
+Target=miPrimerProyecto.hex
+Processor_Text=PIC16F88
+CCSVersion=5.110P
+Compiler=PCM
+[Target Data]
+FileList=miPrimerProyecto.c
+[miPrimerProyecto.c]
+Type=4
+[mru-list]
+1=miPrimerProyecto.c
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=miPrimerProyecto (main)

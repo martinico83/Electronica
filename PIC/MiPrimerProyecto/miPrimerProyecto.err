@@ -1,0 +1,5 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\miPrimerProyecto on 15-jun.-23 at 16:42
+>>> Warning 203 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\miPrimerProyecto.c" Line 24(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

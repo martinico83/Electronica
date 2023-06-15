@@ -1,0 +1,20 @@
+//Directivas
+
+
+//Variables globales
+
+
+//Interrupciones
+
+
+
+//Programa principal
+void main (){
+   //Configuración de periféricos
+   
+   
+   //Bucle infinito
+   while(1){
+   
+   }
+}

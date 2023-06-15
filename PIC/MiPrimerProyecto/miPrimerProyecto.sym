@@ -1,0 +1,59 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+005     PORTA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+021     main.@SCRATCH1
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+085     TRISA
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000024  @cinit2
+
+Project Directory:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\
+
+Project Files:
+    miPrimerProyecto.c                                      [15-jun.-23 16:42  CRC=4E9E682D]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f88.h [03-oct.-22 04:09  CRC=25D0379C]
+
+Source signature=9A3ED765
+Program memory checksum=0000
+Hex file CRC=1CFB
+
+Units:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\miPrimerProyecto (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   miPrimerProyecto.xsym
+    Errors:      miPrimerProyecto.err
+    Ext Symbols: miPrimerProyecto.esym
+    INHX8:       miPrimerProyecto.hex
+    Symbols:     miPrimerProyecto.sym
+    List:        miPrimerProyecto.lst
+    Debug/COFF:  miPrimerProyecto.cof
+    Project:     miPrimerProyecto.ccspjt
+    Call Tree:   miPrimerProyecto.tre
+    Statistics:  miPrimerProyecto.STA

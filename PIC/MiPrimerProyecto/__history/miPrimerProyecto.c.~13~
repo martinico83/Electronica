@@ -1,0 +1,30 @@
+//Directivas
+
+#include <16f88.h>
+#fuses xt, nowdt
+#use delay(clock=4M)
+
+#byte TRISB = 0x87
+#byte PORTB = 0x07
+//Variables globales
+
+
+//Interrupciones
+
+
+
+//Programa principal
+void main (){
+   //Configuración de periféricos
+   TRISB = 0x00;
+   PORTB = 0x00;
+   
+   
+   //Bucle infinito
+   while(1){
+   PORTB = 0b11111111;
+   delay_ms(1000);
+   PORTB = 0b00000000;
+   delay_ms(1000);   
+   }
+}

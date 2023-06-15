@@ -1,0 +1,5 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MPLAB-PIC16F88\Mplab_proyecto_PIC16f88.X\miPrimerProyectoMplab on 15-jun.-23 at 13:37
+C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MPLAB-PIC16F88\Mplab_proyecto_PIC16f88.X\miPrimerProyectoMplab.c:24:1:  Warning#203  Condition always TRUE
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.
