@@ -9,15 +9,12 @@ FileList=ProyectoPIC16f877A.c
 Type=4
 [mru-list]
 1=ProyectoPIC16f877A.c
-[Units]
-Count=1
-1=ProyectoPIC16f877A (main)
 
 [defines]
-buildcount=1
+buildcount=2
 
 [ProjectLog]
-Days=1
+Days=2
 D1=15-06-2023
 D1_L=2
 D1_L1=[31457]Stopped Editing.
@@ -26,8 +23,18 @@ TotalDebug=0
 D1_E=2
 D1_D=0
 D1_L2=[31912]Project Closed.
+D2=21-06-2023
+D2_L=2
+D2_L1=[59232]Project Opened.
+D2_L2=[59322]Project Closed.
 
 [Opened Files]
 1=ProyectoPIC16f877A.c
-t1=7
+t1=1
 Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=ProyectoPIC16f877A (main)

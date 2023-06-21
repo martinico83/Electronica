@@ -28,18 +28,18 @@ ROM Allocation:
 000023  @cinit2
 
 Project Directory:
-    C:\Users\El_fi\OneDrive\Escritorio\PIC16F877A\
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\CCS-PIC16F877A\
 
 Project Files:
     ProyectoPIC16f877A.c                                    [15-jun.-23 08:39  CRC=500A5D46]
-    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h [03-oct.-22 04:09  CRC=03DAD9B4]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h [03-oct.-22 04:09  CRC=03DAD9B4]
 
 Source signature=57C010AE
 Program memory checksum=0000
 Hex file CRC=8309
 
 Units:
-    C:\Users\El_fi\OneDrive\Escritorio\PIC16F877A\ProyectoPIC16f877A (main)
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\CCS-PIC16F877A\ProyectoPIC16f877A (main)
 
 Compiler Settings:
     Processor:      PIC16F877A

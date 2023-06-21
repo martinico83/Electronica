@@ -1,5 +1,0 @@
-Compiling C:\Users\El_fi\OneDrive\Escritorio\PIC16F877A\ProyectoPIC16f877A on 15-jun.-23 at 08:40
->>> Warning 203 "C:\Users\El_fi\OneDrive\Escritorio\PIC16F877A\ProyectoPIC16f877A.c" Line 24(1,1): Condition always TRUE
-      Memory usage:   ROM=1%      RAM=2% - 2%
-      0 Errors,  1 Warnings.
-Build Successful.

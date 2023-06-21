@@ -14,7 +14,7 @@ Stack size: 8
 Lines Stmts  %   Files
 ----- ----- ---  -----
    31     8 100  ProyectoPIC16f877A.c
-  708     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
+  708     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
 ----- -----
   739     8 Total
 
