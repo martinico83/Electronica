@@ -4,8 +4,8 @@
 #fuses xt, nowdt
 #use delay(clock=4M)
 
-#byte TRISA = 0x87
-#byte PORTA = 0x07
+#byte TRISA = 0x85
+#byte PORTA = 0x05
 //Variables globales
 
 
@@ -22,7 +22,7 @@ void main (){
    
    //Bucle infinito
    while(1){
-   PORTA = 0b11111111;
+   PORTA = 0b00000001;
    delay_ms(1000);
    PORTA = 0b00000000;
    delay_ms(1000);   

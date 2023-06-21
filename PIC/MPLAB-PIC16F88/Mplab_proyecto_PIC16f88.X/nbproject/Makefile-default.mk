@@ -102,11 +102,11 @@ ${OBJECTDIR}/miPrimerProyectoMplab.o: miPrimerProyectoMplab.c  nbproject/Makefil
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} ${DISTDIR} 
-	${MP_CC}  out="${OBJECTDIR}"  miPrimerProyectoMplab.c +FM +EX +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 
+	${MP_CC}  out="${OBJECTDIR}"  miPrimerProyectoMplab.c +FM +DF +CC #__DEBUG=1 +ICD +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 
 	@mv ${OBJECTDIR}/miPrimerProyectoMplab.cof "${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.cof" 
 	@mv ${OBJECTDIR}/miPrimerProyectoMplab.hex "${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" miPrimerProyectoMplab.c +EXPORT +FM +EX +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" miPrimerProyectoMplab.c +EXPORT +FM +DF +CC #__DEBUG=1 +ICD +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -115,11 +115,11 @@ ${OBJECTDIR}/miPrimerProyectoMplab.o: miPrimerProyectoMplab.c  nbproject/Makefil
 	${MKDIR} ${OBJECTDIR} 
 ifeq (1,1) 
 	${MKDIR} ${DISTDIR} 
-	${MP_CC}  out="${OBJECTDIR}"  miPrimerProyectoMplab.c +FM +EX +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 
+	${MP_CC}  out="${OBJECTDIR}"  miPrimerProyectoMplab.c +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 
 	@mv ${OBJECTDIR}/miPrimerProyectoMplab.cof "${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.cof" 
 	@mv ${OBJECTDIR}/miPrimerProyectoMplab.hex "${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex"
 else 
-	${MP_CC}  out=""${OBJECTDIR}"" miPrimerProyectoMplab.c +EXPORT +FM +EX +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 +EXPORTD="${OBJECTDIR}"  
+	${MP_CC}  out=""${OBJECTDIR}"" miPrimerProyectoMplab.c +EXPORT +FM +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +Z -P #__16F88=1 +EXPORTD="${OBJECTDIR}"  
 	
 endif 
 	
@@ -133,7 +133,7 @@ ${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFIL
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="${DISTDIR}"  +FM +EX +DF +CC LINK=Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/miPrimerProyectoMplab.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="${DISTDIR}"  +FM +DF +CC LINK=Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/miPrimerProyectoMplab.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
@@ -143,7 +143,7 @@ ${DISTDIR}/Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFIL
 ifeq (1,1) 
 	
 else 
-	${MP_LD}   out="${DISTDIR}"  +FM +EX +DF +CC LINK=Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/miPrimerProyectoMplab.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
+	${MP_LD}   out="${DISTDIR}"  +FM +DF +CC LINK=Mplab_proyecto_PIC16f88.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/miPrimerProyectoMplab.o +Y=9 +EA +DF +LN +T +A +M +J +Z -P
 	
 endif 
 	
