@@ -1,0 +1,5 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\CCS-Gestion_de_puertos\Gestion_de_puertos on 22-jun.-23 at 08:49
+>>> Warning 203 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\CCS-Gestion_de_puertos\Gestion_de_puertos.c" Line 26(1,1): Condition always TRUE
+      Memory usage:   ROM=0%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.
