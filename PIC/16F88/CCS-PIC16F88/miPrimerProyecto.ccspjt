@@ -1,13 +1,13 @@
 [defines]
-buildcount=14
+buildcount=19
 
 [Opened Files]
 1=miPrimerProyecto.c
-t1=9
+t1=1
 Count=1
 
 [ProjectLog]
-Days=2
+Days=5
 D1=14-06-2023
 D1_L=11
 D1_L1=[50300]Stopped Editing.
@@ -21,7 +21,7 @@ D1_L8=[60167]Started Editing.
 D1_L9=[60467]Stopped Editing.
 D1_L10=[60642]Started Editing.
 D1_L11=[61081]Stopped Editing.
-TotalEdit=43
+TotalEdit=63
 TotalDebug=0
 D2=15-06-2023
 D2_E=43
@@ -38,6 +38,30 @@ D2_L8=[48844]Stopped Editing.
 D2_L9=[59914]Started Editing.
 D2_L10=[60204]Stopped Editing.
 D2_L11=[60204]Project Closed.
+D3=27-06-2023
+D3_L=3
+D3_L1=[58989]Project Opened.
+D3_E=8
+D3_D=0
+D3_L2=[59068]Started Editing.
+D3_L3=[59371]Stopped Editing.
+D4=28-06-2023
+D4_E=1
+D4_D=0
+D4_L=8
+D4_L1=[46890]Project Closed.
+D4_L2=[46910]Project Opened.
+D4_L3=[46992]Started Editing.
+D4_L4=[47357]Stopped Editing.
+D4_L5=[48943]Started Editing.
+D4_L6=[49615]Stopped Editing.
+D4_L7=[50075]Started Editing.
+D4_L8=[50579]Stopped Editing.
+D5=29-06-2023
+D5_E=11
+D5_D=0
+D5_L=1
+D5_L1=[32123]Project Closed.
 [PROJECT]
 Target=miPrimerProyecto.hex
 Processor_Text=PIC16F88

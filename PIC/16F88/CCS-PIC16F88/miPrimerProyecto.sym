@@ -1,6 +1,6 @@
 004-005 @WRITE_PROGRAM_MEMORY8.P1
 004-005 @READ_PROGRAM_MEMORY8.P2
-005     PORTA
+006     PORTB
 015     CCP_1
 015     CCP_1_LOW
 016     CCP_1_HIGH
@@ -11,7 +11,7 @@
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
-085     TRISA
+086     TRISB
 09C.6   C1OUT
 09C.7   C2OUT
 10D-10E @READ_PROGRAM_MEMORY8.P1
@@ -21,21 +21,21 @@ ROM Allocation:
 000004  @delay_ms1
 000019  @cinit1
 000019  main
-000024  @cinit2
+000028  @cinit2
 
 Project Directory:
-    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\CCS-PIC16F88\
 
 Project Files:
-    miPrimerProyecto.c                                      [15-jun.-23 16:42  CRC=4E9E682D]
-    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f88.h [03-oct.-22 04:09  CRC=25D0379C]
+    miPrimerProyecto.c                                      [28-jun.-23 13:58  CRC=0F5AB2BA]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f88.h [03-oct.-22 04:09  CRC=25D0379C]
 
-Source signature=9A3ED765
+Source signature=5AFB21F2
 Program memory checksum=0000
-Hex file CRC=1CFB
+Hex file CRC=B00B
 
 Units:
-    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\miPrimerProyecto (main)
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\CCS-PIC16F88\miPrimerProyecto (main)
 
 Compiler Settings:
     Processor:      PIC16F88

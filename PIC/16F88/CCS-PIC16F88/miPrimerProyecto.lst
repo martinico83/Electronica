@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.110P, 62724               15-jun.-23 16:42
+CCS PCM C Compiler, Version 5.110P, 62724               28-jun.-23 13:58
 
-               Filename:   C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\MiPrimerProyecto\miPrimerProyecto.lst
+               Filename:   C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\CCS-PIC16F88\miPrimerProyecto.lst
 
-               ROM used:   59 words (1%)
+               ROM used:   63 words (2%)
                            Largest free fragment is 2048
                RAM used:   6 (2%) at main() level
                            7 (2%) worst case
@@ -31,8 +31,8 @@ CCS PCM C Compiler, Version 5.110P, 62724               15-jun.-23 16:42
 .................... 
 .................... #list
 .................... 
-.................... #fuses xt, nowdt
-.................... #use delay(clock=4M)
+.................... #fuses XT, NOPROTECT, NOWDT, NOBROWNOUT, PUT, NOLVP
+.................... #use DELAY(internal=4000000)
 0004:  MOVLW  22
 0005:  MOVWF  04
 0006:  BCF    03.7
@@ -55,8 +55,8 @@ CCS PCM C Compiler, Version 5.110P, 62724               15-jun.-23 16:42
 0017:  GOTO   00A
 0018:  RETURN
 .................... 
-.................... #byte TRISA = 0x85
-.................... #byte PORTA = 0x05
+.................... #byte TRISB = 0x86
+.................... #byte PORTB = 0x06
 .................... //Variables globales
 .................... 
 .................... 
@@ -69,51 +69,55 @@ CCS PCM C Compiler, Version 5.110P, 62724               15-jun.-23 16:42
 0019:  MOVF   03,W
 001A:  ANDLW  1F
 001B:  MOVWF  03
-001C:  BSF    03.5
-001D:  BCF    1F.4
-001E:  BCF    1F.5
-001F:  MOVF   1B,W
-0020:  ANDLW  80
-0021:  MOVWF  1B
-0022:  MOVLW  07
-0023:  MOVWF  1C
-0024:  BCF    03.7
+001C:  MOVLW  62
+001D:  BSF    03.5
+001E:  MOVWF  0F
+001F:  CLRF   10
+0020:  MOVF   0F,W
+0021:  BCF    1F.4
+0022:  BCF    1F.5
+0023:  MOVF   1B,W
+0024:  ANDLW  80
+0025:  MOVWF  1B
+0026:  MOVLW  07
+0027:  MOVWF  1C
+0028:  BCF    03.7
 ....................    //Configuración de periféricos
-....................    TRISA = 0x00;
-0025:  CLRF   05
-....................    PORTA = 0x00;
-0026:  BCF    03.5
-0027:  CLRF   05
+....................    TRISB = 0x00;
+0029:  CLRF   06
+....................    PORTB = 0x00;
+002A:  BCF    03.5
+002B:  CLRF   06
 ....................    
 ....................    
 ....................    //Bucle infinito
-....................    while(1){
-....................    PORTA = 0b00000001;
-0028:  MOVLW  01
-0029:  MOVWF  05
+....................    while(TRUE){
+....................    PORTB = 0b11111111;
+002C:  MOVLW  FF
+002D:  MOVWF  06
 ....................    delay_ms(1000);
-002A:  MOVLW  04
-002B:  MOVWF  21
-002C:  MOVLW  FA
-002D:  MOVWF  22
-002E:  CALL   004
-002F:  DECFSZ 21,F
-0030:  GOTO   02C
-....................    PORTA = 0b00000000;
-0031:  CLRF   05
+002E:  MOVLW  04
+002F:  MOVWF  21
+0030:  MOVLW  FA
+0031:  MOVWF  22
+0032:  CALL   004
+0033:  DECFSZ 21,F
+0034:  GOTO   030
+....................    PORTB = 0b00000000;
+0035:  CLRF   06
 ....................    delay_ms(1000);   
-0032:  MOVLW  04
-0033:  MOVWF  21
-0034:  MOVLW  FA
-0035:  MOVWF  22
-0036:  CALL   004
-0037:  DECFSZ 21,F
-0038:  GOTO   034
-0039:  GOTO   028
+0036:  MOVLW  04
+0037:  MOVWF  21
+0038:  MOVLW  FA
+0039:  MOVWF  22
+003A:  CALL   004
+003B:  DECFSZ 21,F
+003C:  GOTO   038
+003D:  GOTO   02C
 ....................    }
 .................... }
-003A:  SLEEP
+003E:  SLEEP
 
 Configuration Fuses:
-   Word  1: 3F61   NOWDT PUT XT MCLR BROWNOUT NOLVP NOCPD NOWRT NODEBUG CCPB0 NOPROTECT
+   Word  1: 3F30   NOWDT PUT INTRC_IO MCLR NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG CCPB0 NOPROTECT
    Word  2: 3FFF   FCMEN IESO

@@ -1,11 +1,11 @@
 //Directivas
 
 #include <16f88.h>
-#fuses XT, NOPROTECT, NOWDT, NOBROWNOUT, PUT, NOLVP
-#use DELAY(internal=4000000)
+#fuses INTRC_IO, NOWDT
+#use delay(clock=4000000)
 
-#byte TRISB = 0x86
-#byte PORTB = 0x06
+#byte TRISA = 0x85
+#byte PORTA = 0x05
 //Variables globales
 
 
@@ -16,15 +16,15 @@
 //Programa principal
 void main (){
    //Configuración de periféricos
-   TRISB = 0x00;
-   PORTB = 0x00;
+   TRISA = 0x00;
+   PORTA = 0x00;
    
    
    //Bucle infinito
-   while(TRUE){
-   PORTB = 0b11111111;
+   while(1){
+   PORTA = 0b00000001;
    delay_ms(1000);
-   PORTB = 0b00000000;
+   PORTA = 0b00000000;
    delay_ms(1000);   
    }
 }
