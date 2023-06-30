@@ -1,0 +1,45 @@
+
+ROM used:   34/4096 (1%)
+            34/4096 (1%) including unused fragments
+
+            0.0 Average locations per line
+            3.4 Average locations per statement
+
+RAM used:   6/368 (2%) at main() level
+            6/368 (2%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   36    10 100  Gestion_de_puertos.c
+  679     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f88.h
+----- -----
+  715    10 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     30  88    1    154  3.5  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              10
+    Comments                136
+    Volume (V)              156
+    Difficulty (D)          3.3
+    Effort to implement (E) 507
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    72
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF    30  2014  
+00800-00FFF     0  2048  
+
+
+

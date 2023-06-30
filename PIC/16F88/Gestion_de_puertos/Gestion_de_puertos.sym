@@ -1,0 +1,59 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+005.0   PORTA_RA0
+006     PORTB
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+021     main.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+085.0   TRISA_RA0
+086     TRISB
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000013  @cinit2
+
+Project Directory:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Gestion_de_puertos\
+
+Project Files:
+    Gestion_de_puertos.c                                    [30-jun.-23 16:01  CRC=C491F390]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f88.h [03-oct.-22 04:09  CRC=25D0379C]
+
+Source signature=103262C8
+Program memory checksum=0000
+Hex file CRC=BEB8
+
+Units:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Gestion_de_puertos\Gestion_de_puertos (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Gestion_de_puertos.xsym
+    Errors:      Gestion_de_puertos.err
+    Ext Symbols: Gestion_de_puertos.esym
+    INHX8:       Gestion_de_puertos.hex
+    Symbols:     Gestion_de_puertos.sym
+    List:        Gestion_de_puertos.lst
+    Debug/COFF:  Gestion_de_puertos.cof
+    Project:     Gestion_de_puertos.ccspjt
+    Call Tree:   Gestion_de_puertos.tre
+    Statistics:  Gestion_de_puertos.STA

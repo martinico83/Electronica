@@ -1,0 +1,99 @@
+CCS PCM C Compiler, Version 5.110P, 62724               30-jun.-23 16:12
+
+               Filename:   C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Gestion_de_puertos\Gestion_de_puertos.lst
+
+               ROM used:   34 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... //Directivas
+.................... 
+.................... #include <16f88.h>
+.................... //////////// Standard Header file for the PIC16F88 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F88
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT
+.................... #use DELAY(internal=4M)
+.................... 
+.................... // Registros a definir
+.................... // Puerto A
+.................... #byte TRISB = 0x86
+.................... #byte PORTB = 0x06
+.................... 
+.................... // Puerto A - RA0
+.................... #bit TRISA_RA0=0x85.0
+.................... #bit PORTA_RA0=0x05.0
+.................... 
+.................... 
+.................... //Programa principal
+.................... void main (){
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  62
+0008:  BSF    03.5
+0009:  MOVWF  0F
+000A:  CLRF   10
+000B:  MOVF   0F,W
+000C:  BCF    1F.4
+000D:  BCF    1F.5
+000E:  MOVF   1B,W
+000F:  ANDLW  80
+0010:  MOVWF  1B
+0011:  MOVLW  07
+0012:  MOVWF  1C
+0013:  BCF    03.7
+....................    //Configuración de periféricos
+....................    // Configuracion de las GPIOs
+....................    TRISB=0x00;
+0014:  CLRF   06
+....................    PORTA_RA0=0x00;
+0015:  BCF    03.5
+0016:  BCF    05.0
+....................    
+....................    TRISA_RA0=1;
+0017:  BSF    03.5
+0018:  BSF    05.0
+....................      
+....................    //Bucle infinito
+....................    while(TRUE){
+....................    if(PORTA_RA0 == 0){
+0019:  BCF    03.5
+001A:  BTFSC  05.0
+001B:  GOTO   01F
+....................    PORTB=0xFF;
+001C:  MOVLW  FF
+001D:  MOVWF  06
+....................    }
+001E:  GOTO   020
+....................    else{
+....................    PORTB=0x00;
+001F:  CLRF   06
+....................    }
+0020:  GOTO   01A
+....................    }
+.................... }
+0021:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F70   NOWDT PUT INTRC_IO MCLR BROWNOUT NOLVP NOCPD NOWRT NODEBUG CCPB0 NOPROTECT
+   Word  2: 3FFF   FCMEN IESO

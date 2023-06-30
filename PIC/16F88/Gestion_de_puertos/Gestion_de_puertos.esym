@@ -1,10 +1,9 @@
-D G "__PCM__" 0 0 ""5.110P""
-D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""16-Jun-23""
-D G "__TIME__" 0 0 ""14:44:21""
-D G "_UNICODE" 0 0 ""?""
-D G "__EVAL" 0 0 ""?""
-D G "__16F88" 0 0 "1" "Directivas"
+D G "__PCM__" 0 37 ""5.110P""
+D G "__DEVICE__" 0 37 "88"
+D G "__DATE__" 0 37 ""30-Jun-23""
+D G "__TIME__" 0 37 ""16:12:26""
+D G "_UNICODE" 0 37 ""?""
+D G "__EVAL" 0 37 ""?"" "Directivas"
 c L "set_tris_a" 1 1 6 "FUNCTION"
 F N "set_tris_a" 1 38 ""
 V L "value" 1 38 "int8" `55 
@@ -344,9 +343,9 @@ F N "read_adc" 1 354 ""
 f G "read_adc" 1 354 "int16()" `173 
 F N "read_adc" 1 355 ""
 V L "mode" 1 355 "int8" `174 
-f G "read_adc" 1 355 "int16(int8 mode)" `173 
+f G "read_adc" 1 355 "int16(int8 mode,int16 pins)" `173 
 F N "adc_done" 1 356 ""
-F B "adc_done" 1 356 "int8(int8 mode)" `173  "Constants used for SETUP_ADC() are:"
+F B "adc_done" 1 356 "int8(int8 mode,int16 pins)" `173  "Constants used for SETUP_ADC() are:"
 D G "ADC_OFF" 1 358 "0" "ADC Off"
 D G "ADC_CLOCK_DIV_2" 1 359 "0x10000"
 D G "ADC_CLOCK_DIV_4" 1 360 "0x4000"
@@ -784,9 +783,9 @@ F B "i2c_transfer_in" 1 518 "int8(int8 stream,int8 address,*int8 rData,int8 rCou
 F N "spi_xfer" 1 521 ""
 F B "spi_xfer" 1 521 "int8()" `474 
 F N "spi_xfer" 1 522 ""
-f G "spi_xfer" 1 522 "int16()" `475 
+f G "spi_xfer" 1 522 "int16(int8 data)" `475 
 F N "spi_xfer" 1 523 ""
-f G "spi_xfer" 1 523 "int32()" `475 
+f G "spi_xfer" 1 523 "int32(int8 data)" `475 
 F N "spi_xfer" 1 524 ""
 V L "data" 1 524 "int8" `476 
 F B "spi_xfer" 1 524 "int8(int8 data)" `475 
@@ -866,18 +865,18 @@ F B "spi_prewrite" 1 543 "void(int8 ,int32 data)" `528
 F N "spi_xfer_in" 1 544 ""
 F B "spi_xfer_in" 1 544 "int8()" `531 
 F N "spi_xfer_in" 1 545 ""
-f G "spi_xfer_in" 1 545 "int16()" `532 
+f G "spi_xfer_in" 1 545 "int16(int8 bits)" `532 
 F N "spi_xfer_in" 1 546 ""
-f G "spi_xfer_in" 1 546 "int32()" `532 
+f G "spi_xfer_in" 1 546 "int32(int8 bits)" `532 
 F N "spi_xfer_in" 1 547 ""
 V L "bits" 1 547 "int8" `533 
 F B "spi_xfer_in" 1 547 "int8(int8 bits)" `532 
 F N "spi_xfer_in" 1 548 ""
 V L "bits" 1 548 "int8" `535 
-f G "spi_xfer_in" 1 548 "int16(int8 bits)" `534 
+f G "spi_xfer_in" 1 548 "int16(int8 bits,int8 bits)" `534 
 F N "spi_xfer_in" 1 549 ""
 V L "bits" 1 549 "int8" `535 
-f G "spi_xfer_in" 1 549 "int32(int8 bits)" `534 
+f G "spi_xfer_in" 1 549 "int32(int8 bits,int8 bits)" `534 
 F N "spi_xfer_in" 1 550 ""
 V L "stream" 1 550 "int8" `535 
 V L "bits" 1 550 "int8" `536 
@@ -885,11 +884,11 @@ F B "spi_xfer_in" 1 550 "int8(int8 stream,int8 bits)" `534
 F N "spi_xfer_in" 1 551 ""
 V L "stream" 1 551 "int8" `535 
 V L "bits" 1 551 "int8" `539 
-f G "spi_xfer_in" 1 551 "int16(int8 stream,int8 bits)" `537 
+f G "spi_xfer_in" 1 551 "int16(int8 stream,int8 bits,int16 count)" `537 
 F N "spi_xfer_in" 1 552 ""
 V L "stream" 1 552 "int8" `535 
 V L "bits" 1 552 "int8" `539 
-f G "spi_xfer_in" 1 552 "int32(int8 stream,int8 bits)" `537 
+f G "spi_xfer_in" 1 552 "int32(int8 stream,int8 bits,int16 count)" `537 
 F N "spi_transfer" 1 553 ""
 V L "wData" 1 553 "*int8" `538 
 V L "rData" 1 553 "*int8" `539 
@@ -958,9 +957,9 @@ F B "rtos_stats" 1 573 "void(int8 task,*int8 stat)" `580  "#use timer() Prototyp
 F N "get_ticks" 1 576 ""
 F B "get_ticks" 1 576 "int8()" `583 
 F N "get_ticks" 1 577 ""
-f G "get_ticks" 1 577 "int16()" `584 
+f G "get_ticks" 1 577 "int16(int8 stream)" `584 
 F N "get_ticks" 1 578 ""
-f G "get_ticks" 1 578 "int32()" `584 
+f G "get_ticks" 1 578 "int32(int8 stream)" `584 
 F N "get_ticks" 1 579 ""
 V L "stream" 1 579 "int8" `585 
 F B "get_ticks" 1 579 "int8(int8 stream)" `584 
@@ -1115,10 +1114,13 @@ D G "INT_EEPROM" 1 673 "0x008D10"
 D G "INT_TIMER0" 1 674 "0x000B20"
 D G "INT_COMP" 1 675 "0x008D40"
 D G "INT_OSC_FAIL" 1 676 "0x008D80"
-C L "jump_to_isr" 0 9 3 "FUNCTION"
-F N "main" 0 17 ""
-F G "main" 0 17 "void()" `676  "Configuración de periféricos"
-C L "main" 0 9 1 "FUNCTION"
+C L "jump_to_isr" 0 7 2 "FUNCTION"
+C L "jump_to_isr" 0 7 1 "FUNCTION"
+C L "jump_to_isr" 0 7 1 "FUNCTION"
+F N "main" 0 18 ""
+F G "main" 0 18 "void()" `678  "Configuración de periféricos"
+C L "main" 0 7 1 "FUNCTION"
+C L "main" 0 7 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
