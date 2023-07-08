@@ -1,0 +1,47 @@
+[PROJECT]
+Target=Gestion_de_puertos_#USEXXX_IO.hex
+Processor_Text=PIC16F88
+CCSVersion=5.110P
+Compiler=PCM
+[Target Data]
+FileList=Gestion_de_puertos_#USEXXX_IO.c
+[Gestion_de_puertos_#USEXXX_IO.c]
+Type=4
+[mru-list]
+1=Gestion_de_puertos_#USEXXX_IO.c
+
+[defines]
+buildcount=8
+
+[ProjectLog]
+Days=2
+D1=06-07-2023
+D1_L=1
+D1_L1=[59482]Stopped Editing.
+D2=07-07-2023
+D2_L=10
+D2_L1=[31084]Project Opened.
+D2_L2=[31450]Started Editing.
+D2_L3=[31812]Stopped Editing.
+D2_L4=[32258]Started Editing.
+D2_L5=[32614]Stopped Editing.
+TotalEdit=16
+TotalDebug=0
+D2_E=16
+D2_D=0
+D2_L6=[32614]Project Closed.
+D2_L7=[32774]Project Opened.
+D2_L8=[47080]Started Editing.
+D2_L9=[47887]Stopped Editing.
+D2_L10=[48544]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=Gestion_de_puertos_#USEXXX_IO.c
+t1=18
+Count=1
+[Units]
+Count=1
+1=Gestion_de_puertos_#USEXXX_IO (main)

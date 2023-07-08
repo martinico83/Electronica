@@ -1,0 +1,121 @@
+CCS PCM C Compiler, Version 5.110P, 62724               07-jul.-23 13:13
+
+               Filename:   C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Gestion_de_pueros_#USEXXX_IO\Gestion_de_puertos_#USEXXX_IO.lst
+
+               ROM used:   41 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... /*
+.................... Se pide crear el ejercicio 2.1 con las tres directivas #USE_XXX_IO en vez de con las directivas #BYTE.
+.................... Ademas, los LEDs iran al puerto C y el boton al pin 3 del puerto B. Activar las resistencias internas de PullUp del puerto B.
+.................... Simular el codigo y comprobar que funciona. Comparar que ocurre con los registros, en concreto el registro TRISB, debbugeando en MPLAB X IDE
+.................... cuando se usa una directiva STANDARD o una FAST.
+.................... */
+.................... 
+.................... //Directivas
+.................... #include<16f88.h>
+.................... //////////// Standard Header file for the PIC16F88 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F88
+.................... 
+.................... #list
+.................... 
+.................... #fuses xt, nowdt
+.................... #use delay(internal=4M)
+.................... 
+.................... // #USE FAST_IO(PUERTO)
+.................... /*
+.................... #USE FAST_IO(A)
+.................... #USE FAST_IO(B)
+.................... */
+.................... 
+.................... // #USE STANDARD_IO(PUERTO)
+.................... /*
+.................... #USE STANDARD_IO(A)
+.................... #USE STANDARD_IO(B)
+....................   */
+.................... 
+.................... // #USE FIXED_IO(PUERTO_OUTPUTS=PIN_A0,....,PIN_A4)
+.................... 
+.................... #USE FIXED_IO(B_OUTPUTS=)
+.................... #USE FIXED_IO(A_OUTPUTS=PIN_A0,PIN_A1,PIN_A2,PIN_A3,PIN_A4,PIN_A6,PIN_A7)
+.................... /*  */
+.................... 
+.................... //Programa principal
+.................... void main (){
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  62
+0008:  BSF    03.5
+0009:  MOVWF  0F
+000A:  CLRF   10
+000B:  MOVF   0F,W
+000C:  BCF    1F.4
+000D:  BCF    1F.5
+000E:  MOVF   1B,W
+000F:  ANDLW  80
+0010:  MOVWF  1B
+0011:  MOVLW  07
+0012:  MOVWF  1C
+0013:  BCF    03.7
+....................    //Configuración de periféricos
+....................    // Configuracion de los GPIOs
+....................   // SET_TRIS_A(0x00);   // Solo para FAST_IO, puerto A entradas
+....................   // SET_TRIS_B(0xFF);   // Solo para FAST_IO, puerto B salidas
+....................    
+....................    port_b_pullups(true); // Activamos las resistencias de pullups de puerto B
+0014:  BCF    01.7
+....................    
+....................    //Bucle infinito
+....................    while(1){
+....................    if(INPUT(PIN_B2)==0){
+0015:  MOVLW  FF
+0016:  MOVWF  06
+0017:  BCF    03.5
+0018:  BTFSC  06.2
+0019:  GOTO   021
+....................       OUTPUT_A(0xff);  // Pines a 1 para encender los LEDs
+001A:  MOVLW  20
+001B:  BSF    03.5
+001C:  MOVWF  05
+001D:  MOVLW  FF
+001E:  BCF    03.5
+001F:  MOVWF  05
+....................    }
+0020:  GOTO   026
+....................    else{
+....................       OUTPUT_A(0x00);  // Pines a 0 para apagar los LEDs
+0021:  MOVLW  20
+0022:  BSF    03.5
+0023:  MOVWF  05
+0024:  BCF    03.5
+0025:  CLRF   05
+....................    }
+0026:  BSF    03.5
+0027:  GOTO   015
+....................    
+....................    }
+.................... }
+0028:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F70   NOWDT PUT INTRC_IO MCLR BROWNOUT NOLVP NOCPD NOWRT NODEBUG CCPB0 NOPROTECT
+   Word  2: 3FFF   FCMEN IESO
