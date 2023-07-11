@@ -1,0 +1,10 @@
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs on 08-jul.-23 at 17:37
+*** Error 18 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 2(9,21): File can not be opened
+    Not in "C:\Program Files (x86)\PICC\Devices\pic16F88.h"
+    Not in "C:\Program Files (x86)\PICC\Drivers\pic16F88.h"
+    Not in source "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
+    Not in local "pic16F88.h"
+    Not in project "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
+    Not in default "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
+*** Error 128 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 3(7,17): A #DEVICE required before this line
+*** Error 128 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 6(2,6): A #DEVICE required before this line
