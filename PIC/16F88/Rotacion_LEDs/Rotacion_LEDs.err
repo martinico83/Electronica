@@ -1,10 +1,5 @@
-Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs on 12-jul.-23 at 08:59
-*** Error 18 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 2(9,21): File can not be opened
-    Not in "C:\Program Files (x86)\PICC\Devices\pic16F88.h"
-    Not in "C:\Program Files (x86)\PICC\Drivers\pic16F88.h"
-    Not in source "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
-    Not in local "pic16F88.h"
-    Not in project "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
-    Not in default "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\pic16F88.h"
-*** Error 128 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 3(7,17): A #DEVICE required before this line
-*** Error 128 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 6(2,6): A #DEVICE required before this line
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs on 12-jul.-23 at 16:34
+>>> Warning 203 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 22(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

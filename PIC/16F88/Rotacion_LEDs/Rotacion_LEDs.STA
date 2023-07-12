@@ -1,0 +1,46 @@
+
+ROM used:   59/4096 (1%)
+            59/4096 (1%) including unused fragments
+
+            0.1 Average locations per line
+            5.4 Average locations per statement
+
+RAM used:   6/368 (2%) at main() level
+            6/368 (2%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   46    11 100  Rotacion_LEDs.c
+  679     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F88.h
+----- -----
+  725    11 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     22  37    1             @delay_ms1
+0     33  56    1    250  4.5  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              11
+    Comments                151
+    Volume (V)              254
+    Difficulty (D)          4.2
+    Effort to implement (E) 1060
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    112
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF    55  1989  
+00800-00FFF     0  2048  
+
+
+

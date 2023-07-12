@@ -1,0 +1,61 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+005     PORTA
+006     PORTB
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+021     @delay_ms1.P1
+021     main.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+085     TRISA
+086     TRISB
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+00001A  @cinit1
+00001A  main
+000029  @cinit2
+
+Project Directory:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\
+
+Project Files:
+    Rotacion_LEDs.c                                         [12-jul.-23 16:34  CRC=F03AF4BE]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F88.h [03-oct.-22 04:09  CRC=25D0379C]
+
+Source signature=3BDB63F6
+Program memory checksum=0000
+Hex file CRC=446C
+
+Units:
+    C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs (main)
+
+Compiler Settings:
+    Processor:      PIC16F88
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   Rotacion_LEDs.xsym
+    Errors:      Rotacion_LEDs.err
+    Ext Symbols: Rotacion_LEDs.esym
+    INHX8:       Rotacion_LEDs.hex
+    Symbols:     Rotacion_LEDs.sym
+    List:        Rotacion_LEDs.lst
+    Debug/COFF:  Rotacion_LEDs.cof
+    Project:     Rotacion_LEDs.ccspjt
+    Call Tree:   Rotacion_LEDs.tre
+    Statistics:  Rotacion_LEDs.STA

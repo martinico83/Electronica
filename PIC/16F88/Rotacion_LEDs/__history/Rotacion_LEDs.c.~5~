@@ -15,8 +15,7 @@ void main (){
    TRISB=0x00; //Puesto B configurado como salida
    bit_set(TRISA,0);// RA0 configurado como entrada
    
-   //int16 rotacion=1;
-   PORTB=0x01; //Activar un led
+   int16 rotacion=1;
    
    //Bucle infinito
    while(1){
@@ -24,21 +23,15 @@ void main (){
    // Si RC0 es 0 entonces pulse el boton y roto a derecha
    if(bit_test(PORTA,0)==1){
    //Rotar a la izquierda
-   /*
    PORTB=rotacion;
    rotacion=rotacion*2;
    if(rotacion==256)rotacion=1;
-   */
-   rotate_left (&PORTB, 1);
-
+   
    }else{
    //Rotar a la derecha
-   /*
    PORTB=rotacion;
    rotacion=rotacion/2;
    if(rotacion==0)rotacion=128;
-   */
-   rotate_right (&PORTB, 1);
    }
    delay_ms(200);
    }

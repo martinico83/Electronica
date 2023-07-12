@@ -1,0 +1,35 @@
+[PROJECT]
+Target=Rotacion_LEDs.hex
+Processor_Text=PIC16F88
+CCSVersion=5.110P
+Compiler=PCM
+[Target Data]
+FileList=Rotacion_LEDs.c
+[Rotacion_LEDs.c]
+Type=4
+[mru-list]
+1=Rotacion_LEDs.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=12-07-2023
+D1_L=4
+D1_L1=[48990]Stopped Editing.
+D1_L2=[59305]Started Editing.
+D1_L3=[59840]Stopped Editing.
+TotalEdit=26
+TotalDebug=0
+D1_E=26
+D1_D=0
+D1_L4=[59840]Project Closed.
+
+[Opened Files]
+1=Rotacion_LEDs.c
+t1=5
+Count=1
+[Units]
+Count=1
+1=Rotacion_LEDs (main)

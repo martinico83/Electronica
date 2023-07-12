@@ -1,0 +1,134 @@
+CCS PCM C Compiler, Version 5.110P, 62724               12-jul.-23 16:34
+
+               Filename:   C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.lst
+
+               ROM used:   59 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   01A
+0003:  NOP
+.................... //Directivas
+.................... #include<16F88.h>
+.................... //////////// Standard Header file for the PIC16F88 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F88
+.................... 
+.................... #list
+.................... 
+.................... #fuses xt, nowdt
+.................... #use delay(internal=4000000)
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  BCF    0A.3
+0019:  GOTO   039 (RETURN)
+.................... 
+.................... #byte TRISA=0x85
+.................... #byte PORTA=0x05
+.................... #byte TRISB=0x86
+.................... #byte PORTB=0x06
+.................... 
+.................... //Programa principal
+.................... void main (){
+001A:  MOVF   03,W
+001B:  ANDLW  1F
+001C:  MOVWF  03
+001D:  MOVLW  62
+001E:  BSF    03.5
+001F:  MOVWF  0F
+0020:  CLRF   10
+0021:  MOVF   0F,W
+0022:  BCF    1F.4
+0023:  BCF    1F.5
+0024:  MOVF   1B,W
+0025:  ANDLW  80
+0026:  MOVWF  1B
+0027:  MOVLW  07
+0028:  MOVWF  1C
+0029:  BCF    03.7
+....................    //Configuración de periféricos
+....................    //Configuracion de las GPIOs
+....................    TRISB=0x00; //Puesto B configurado como salida
+002A:  CLRF   06
+....................    bit_set(TRISA,0);// RA0 configurado como entrada
+002B:  BSF    05.0
+....................    
+....................    //int16 rotacion=1;
+....................    PORTB=0x01; //Activar un led
+002C:  MOVLW  01
+002D:  BCF    03.5
+002E:  MOVWF  06
+....................    
+....................    //Bucle infinito
+....................    while(1){
+....................    // Si RC0 es 1 no pulse el boton entonces roto a izquierda
+....................    // Si RC0 es 0 entonces pulse el boton y roto a derecha
+....................    if(bit_test(PORTA,0)==1){
+002F:  BTFSS  05.0
+0030:  GOTO   034
+....................    //Rotar a la izquierda
+....................    /*
+....................    PORTB=rotacion;
+....................    rotacion=rotacion*2;
+....................    if(rotacion==256)rotacion=1;
+....................    */
+....................    rotate_left (&PORTB, 1);
+0031:  RLF    06,W
+0032:  RLF    06,F
+.................... 
+....................    }else{
+0033:  GOTO   036
+....................    //Rotar a la derecha
+....................    /*
+....................    PORTB=rotacion;
+....................    rotacion=rotacion/2;
+....................    if(rotacion==0)rotacion=128;
+....................    */
+....................    rotate_right (&PORTB, 1);
+0034:  RRF    06,W
+0035:  RRF    06,F
+....................    }
+....................    delay_ms(200);
+0036:  MOVLW  C8
+0037:  MOVWF  21
+0038:  GOTO   004
+0039:  GOTO   02F
+....................    }
+.................... }
+003A:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F70   NOWDT PUT INTRC_IO MCLR BROWNOUT NOLVP NOCPD NOWRT NODEBUG CCPB0 NOPROTECT
+   Word  2: 3FFF   FCMEN IESO
