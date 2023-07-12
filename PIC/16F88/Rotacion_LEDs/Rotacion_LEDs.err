@@ -1,4 +1,4 @@
-Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs on 08-jul.-23 at 17:37
+Compiling C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs on 12-jul.-23 at 08:59
 *** Error 18 "C:\Users\El_fi\OneDrive\Escritorio\Electronica\PIC\16F88\Rotacion_LEDs\Rotacion_LEDs.c" Line 2(9,21): File can not be opened
     Not in "C:\Program Files (x86)\PICC\Devices\pic16F88.h"
     Not in "C:\Program Files (x86)\PICC\Drivers\pic16F88.h"
